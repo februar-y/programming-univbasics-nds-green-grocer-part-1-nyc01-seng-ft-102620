@@ -20,7 +20,7 @@ def consolidate_cart(cart)
   
   new_cart = []
   cart.each do |item|
-    if find_item_by_name_in_collection(item[:item], cart) == nil
+    if find_item_by_name_in_collection(item[:item], new_cart) == nil
       item[:count] = cart.count(item)
       new_cart << item
     end
