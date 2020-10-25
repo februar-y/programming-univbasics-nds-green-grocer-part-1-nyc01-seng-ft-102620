@@ -19,14 +19,14 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   
   new_cart = []
+  p cart
   cart.each do |item|
     if find_item_by_name_in_collection(item[:item], new_cart) == nil
       item[:count] = cart.count(item)
       new_cart << item
     end
   end
-  p new_cart
-  
+  new_cart
 end
 
 
